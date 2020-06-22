@@ -1,0 +1,59 @@
+/*********** Config ***********/
+/*
+  Aquí van todas las configuraciones previas para desarrollar, como funciones,
+  mixins, las variable y clases de utilidad.
+*/
+@import './config/variables';
+@import './config/mixins';
+@import './config/utilities';
+
+/*********** layout ***********/
+/*
+  clases para definir el layout, como container, o section etc
+*/
+@import './layout/layout';
+
+/*********** theme ***********/
+/*
+  Todo lo relacionado con los colores del sitio y las tipografias, para un futuro,
+  solo cambiar los valores de este archivo, y así obtener un nuevo tema
+*/
+@import './theme/theme';
+
+/*********** components ***********/
+/*
+  Todos aquellos elementos reutilizables, como botones y tarjetas, footer, menu etc.
+*/
+@import './components/menu';
+@import './components/buttons';
+
+
+/***** Este es nada más un codigo de prueba, borrelo *****/
+body{
+  font-family: sans-serif;
+}
+nav{
+  background-color: #fff;
+  padding: 1rem;
+  box-shadow: 0 2px 10px 0 rgba(61, 61, 61, .5);
+}
+.menu{
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.menu__link {
+  text-decoration: none;
+  color: cornflowerblue;
+  font-size: 20px;
+}
+
+h1{
+  text-align: center;
+}
+p{
+  font-size: 20px;
+  text-align: center;
+}
+

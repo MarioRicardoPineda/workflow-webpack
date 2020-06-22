@@ -1,0 +1,4 @@
+{
+  // En este lugar se agregan los presets como react, typescript etc
+  "presets" : [ "@babel/preset-env" ]
+}
