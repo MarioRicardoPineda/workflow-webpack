@@ -3,7 +3,8 @@ const path = require('path'),
     HtmlWebpackPlugin = require('html-webpack-plugin'),
     MiniCssExtractPlugin = require('mini-css-extract-plugin'),
     { CleanWebpackPlugin } = require('clean-webpack-plugin'),
-    autoprefixer = require('autoprefixer')
+    autoprefixer = require('autoprefixer'),
+    CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   // para poner el modo de desarrollo o produccion
@@ -125,6 +126,12 @@ module.exports = {
   plugins : [
     // Para limpiar la carpeta dist
     new CleanWebpackPlugin(),
+    // Para redireccionar las imagenes a la carpeta.
+    new CopyWebpackPlugin({
+      patterns: [
+        {from:'./src/static/images',to:'assets/images'} 
+      ] 
+    }),
     // Ingreso primero el mini css extract porque primero extrae y luego se lo pasa a html, esto es importante
     new MiniCssExtractPlugin({
       filename: 'css/[name].css'
